@@ -1,0 +1,8 @@
+log verbose "c:\logtest.txt"
+option confirm:yes-to-all
+criteria crc
+load "%1" "%2"
+#filter "-*.log;-*.txt"
+expand all
+select right.diff.files right.orphan.files
+copyto right path:base "%3"
